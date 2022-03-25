@@ -70,15 +70,15 @@ public class Tractor extends Vehicle implements Harvest {
 
 
 
-    public <T extends Crop> T harvestCrop2(List<T> crops) {
-
-        for (int i = 0; i<tractorTrailer.size(); i++){
-            trunk.add(crops.get(i).yield());
-            crops.get(i).setHarvested(true);
-        }
-
-        return null;
-    }
+//    public <T extends Crop> T harvestCrop2(List<T> crops) {
+//
+//        for (int i = 0; i<tractorTrailer.size(); i++){
+//            trunk.add(crops.get(i).yield());
+//            crops.get(i).setHarvested(true);
+//        }
+//
+//        return null;
+//    }
 
     @Override
     public void harvestCrop(CropRow<Crop> cropRow) {

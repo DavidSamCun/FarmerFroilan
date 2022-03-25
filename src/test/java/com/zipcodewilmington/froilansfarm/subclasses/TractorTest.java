@@ -97,6 +97,7 @@ class TractorTest {
         dust1.fertalize(cropField);
 
         tonka.harvestCrop(cropField.getCropRow(0));
+        cropField.getCropRow(0).harvestCropRow();
 
         //Then
         Assert.assertEquals(cropField.getCropRow(0).size(), 0);
@@ -132,6 +133,15 @@ class TractorTest {
         Assert.assertEquals(2, tonka.trunk.size());
 
 
+    }
+
+    @Test
+    public void truckMakeNoiseTest(){
+        Tractor tonka = new Tractor("Tonka");
+        String expected = "Tractor go Beep Beep";
+        System.out.println(tonka.makeNoise());
+
+        Assert.assertEquals(expected,tonka.makeNoise());
     }
 
 }
