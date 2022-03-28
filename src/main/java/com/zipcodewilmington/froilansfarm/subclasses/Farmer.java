@@ -24,9 +24,10 @@ public class Farmer extends Person implements Botanist, Rider {
 
         if (typeOfCrop.toLowerCase(Locale.ROOT).equals("corn")||typeOfCrop.toLowerCase(Locale.ROOT).equals("cornstalk")){
             return new Cornstalk();
-        }
-        else {
-            return  new TomatoPlant();
+        } else if (typeOfCrop.toLowerCase(Locale.ROOT).equals("tomato")||typeOfCrop.toLowerCase(Locale.ROOT).equals("tomatoplant")){
+            return new TomatoPlant();
+        } else {
+            return new PotatoPlant();
         }
 
     }
